@@ -1,0 +1,9 @@
+prefix='/usr/i686-w64-mingw32/sys-root/mingw'
+exec_prefix="/usr/i686-w64-mingw32/sys-root/mingw"
+datarootdir="${prefix}/share"
+datadir="/usr/i686-w64-mingw32/sys-root/mingw/share"
+docdir="${datarootdir}/doc/gettext"
+ACLOCALDIR="${datadir}/aclocal"
+GETTEXTSRCDIR="/usr/i686-w64-mingw32/sys-root/mingw/share/gettext"
+GETTEXTSRCPODIR="/usr/i686-w64-mingw32/sys-root/mingw/share/gettext/po"
+EXAMPLESCONFIGDIR="${datarootdir}/doc/gettext/examples/config"
