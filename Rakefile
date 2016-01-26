@@ -2,28 +2,40 @@ require 'optparse'
 
 task :default => ['msi:build']
 
+namespace :unmanaged do
+  task :scanner do
+    sh 'csc bundle-scanner.cs'
+  end
+
+  task :redirector do
+    sh 'csc redirector.cs'
+  end
+
+  task :wixobj => [:redirector] do
+    sh 'candle unmanaged.wxs'
+  end
+
+  task :msm => [:wixobj] do
+    sh 'light unmanaged.wixobj'
+  end
+
+  task :scan => [:scanner] do
+    sh './bundle-scanner.exe --wix=unmanaged.wxs --bundle=source'
+  end
+end
+
 namespace :msi do
-  task 'gtk-sharp-2.0.wxs' do
+  file 'gtk-sharp-2.0.wxs' do
     sh "erb version=\"#{version}\" gtk-sharp-2.0.wxs.erb > gtk-sharp-2.0.wxs"
   end
 
-  task 'unmanaged/bundle-scanner.exe' do
-    'csc bundle-scanner.cs'
-  end
+   task :unmanaged do
+     Dir.chdir 'unmanaged' do
+       Rake::Task['unmanaged:msm'].invoke
+     end
+   end
 
-  task 'unmanaged/redirector.exe' do
-    'csc redirector.cs'
-  end
-
-  task :scan_unmanaged => ['unmanaged/bundle-scanner.exe'] do
-    sh './unmanaged/bundle-scanner.exe --wix=unmanaged/unmanaged.wxs --bundle=source'
-  end
-
-  task 'unmanaged/unmanaged.wixobj' => ['unmanaged/redirector.exe'] do
-    sh 'candle unmanaged/unmanaged.wxs'
-  end
-
-  task :build => [:clean, 'gtk-sharp-2.0.wxs', 'unmanaged/unmanaged.wixobj'] do
+  task :build => [:clean, 'gtk-sharp-2.0.wxs', :unmanaged] do
     sh "candle -ext WixUIExtension gtk-sharp-2.0.wxs"
     sh "light -cultures:en-us -ext WixUIExtension -ext WixNetFxExtension -out gtk-sharp-#{version}.msi gtk-sharp-2.0.wixobj"
   end
@@ -43,7 +55,7 @@ namespace :msi do
   end
 
   def version
-    options[:version]
+    options[:version] || File.read("VERSION").chop
   end
 end
 
