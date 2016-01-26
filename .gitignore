@@ -1,0 +1,8 @@
+gtk-sharp-2.0.wixobj
+gtk-sharp-2.0.wxs
+*.msi
+*.wixpdb
+unmanaged/redirector.exe
+unmanaged/unmanaged.msm
+unmanaged/unmanaged.wixobj
+unmanaged/unmanaged.wixpdb
