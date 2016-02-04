@@ -1115,6 +1115,7 @@
             <File Id="libpangoft21.00.dll" Name="libpangoft2-1.0-0.dll" Source="source\bin\libpangoft2-1.0-0.dll" Vital="yes"/>
             <File Id="libpangowin321.00.dll" Name="libpangowin32-1.0-0.dll" Source="source\bin\libpangowin32-1.0-0.dll" Vital="yes"/>
             <File Id="libpng1515.dll" Name="libpng15-15.dll" Source="source\bin\libpng15-15.dll" Vital="yes"/>
+	    <File Id="libpng16.dll" Name="libpng16.dll" Source="source\bin\libpng16.dll" Vital="yes"/>
             <File Id="librsvg22.dll" Name="librsvg-2-2.dll" Source="source\bin\librsvg-2-2.dll" Vital="yes"/>
             <File Id="libtiff5.dll" Name="libtiff-5.dll" Source="source\bin\libtiff-5.dll" Vital="yes"/>
             <File Id="libxml2.dll" Name="libxml2-2.dll" Source="source\bin\libxml2-2.dll" Vital="yes"/>
