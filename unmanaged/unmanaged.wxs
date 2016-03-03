@@ -28,6 +28,7 @@
           </Directory>
           <Directory Id="gtk2.0" Name="gtk-2.0">
             <Component Id="etcgtk2.0" Guid="5be9cbc0-dc2d-11dc-8163-005056c00008">
+              <File Id="gdk_pixbuf.loaders" Name="gdk-pixbuf.loaders" Source="source\etc\gtk-2.0\gdk-pixbuf.loaders" Vital="yes"/>
               <File Id="gtk.immodules" Name="gtk.immodules" Source="source\etc\gtk-2.0\gtk.immodules" Vital="yes"/>
               <File Id="gtkrc" Name="gtkrc" Source="custom\etc\gtk-2.0\gtkrc" Vital="no"/>
               <File Id="immultipress.conf" Name="immultipress.conf" Source="source\etc\gtk-2.0\im-multipress.conf" Vital="yes"/>
