@@ -1101,7 +1101,7 @@
             <File Id="libcroco.dll" Name="libcroco-0.6-3.dll" Source="source\bin\libcroco-0.6-3.dll" Vital="yes"/>
             <File Id="libgsf.dll" Name="libgsf-1-114.dll" Source="source\bin\libgsf-1-114.dll" Vital="yes"/>
             <File Id="libfontconfig1.dll" Name="libfontconfig-1.dll" Source="source\bin\libfontconfig-1.dll" Vital="yes"/>
-            <File Id="libgailutil18.dll" Name="libgailutil-18.dll" Source="source\bin\libgailutil-18.dll" Vital="yes"/>
+            <File Id="libgailutil18.dll" Name="libgailutil-2.0-0.dll" Source="source\bin\libgailutil-2.0-0.dll" Vital="yes"/>
             <File Id="libgdkwin322.00.dll" Name="libgdk-win32-2.0-0.dll" Source="source\bin\libgdk-win32-2.0-0.dll" Vital="yes"/>
             <File Id="libgdk_pixbuf2.00.dll" Name="libgdk_pixbuf-2.0-0.dll" Source="source\bin\libgdk_pixbuf-2.0-0.dll" Vital="yes"/>
             <File Id="libglade2.dll" Name="libglade-2.0-0.dll" Source="source\bin\libglade-2.0-0.dll" Vital="yes"/>
@@ -1115,6 +1115,7 @@
             <File Id="libpangoft21.00.dll" Name="libpangoft2-1.0-0.dll" Source="source\bin\libpangoft2-1.0-0.dll" Vital="yes"/>
             <File Id="libpangowin321.00.dll" Name="libpangowin32-1.0-0.dll" Source="source\bin\libpangowin32-1.0-0.dll" Vital="yes"/>
             <File Id="libpng1515.dll" Name="libpng15-15.dll" Source="source\bin\libpng15-15.dll" Vital="yes"/>
+	    <File Id="libpng16.dll" Name="libpng16.dll" Source="source\bin\libpng16.dll" Vital="yes"/>
             <File Id="librsvg22.dll" Name="librsvg-2-2.dll" Source="source\bin\librsvg-2-2.dll" Vital="yes"/>
             <File Id="libtiff5.dll" Name="libtiff-5.dll" Source="source\bin\libtiff-5.dll" Vital="yes"/>
             <File Id="libxml2.dll" Name="libxml2-2.dll" Source="source\bin\libxml2-2.dll" Vital="yes"/>
