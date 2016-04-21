@@ -11,8 +11,8 @@ Comments="Provides Gtk# and dependencies." />
     </Condition>
     <Property Id="PREVIOUSVERSIONSINSTALLED" Secure="yes" />
     <Upgrade Id="6AAF2A04-27B0-4D70-8EBB-3EB225794B3F">
-      <UpgradeVersion OnlyDetect="no" Maximum="<%= version %>" Property="PREVIOUSVERSIONSINSTALLED" 
-IncludeMaximum="no" />
+      <UpgradeVersion OnlyDetect="no" Minimum="2.12.0" IncludeMinimum="yes" Maximum="2.12.99" IncludeMaximum="yes"
+          Property="PREVIOUSVERSIONSINSTALLED" />
     </Upgrade>
     <InstallExecuteSequence>
       <RemoveExistingProducts Before="InstallInitialize" />
